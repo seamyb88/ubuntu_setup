@@ -1,0 +1,2 @@
+install with apt-get 
+Create symbolic link gcc pointing at version wanted.
