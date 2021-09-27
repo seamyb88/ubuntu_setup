@@ -1,0 +1,40 @@
+Github recommends you use Git Credential Manager Core (GCM Core) to remember your credentials.
+
+Instead of manually entering your PAT for every HTTPS Git operation, you can cache 
+your PAT with a Git client. Git will temporarily store your credentials in memory 
+until an expiry interval has passed. You can also store the token in a plain text 
+file that Git can read before every request.
+
+The installations instructions can be found in the github README.md.
+
+Use libsecret. If it's not already pre-installed on your machine, use the following
+procedure:
+
+Make sure libsecret is installed:
+
+    sudo apt install libsecret-1-0 libsecret-1-dev
+
+Then build the credential helper from the sources shipped with libsecret's 
+development libraries:
+
+    sudo make --directory=/usr/share/doc/git/contrib/credential/libsecret
+
+Finally, register the freshly compiled binary as a Git credential helper:
+
+    git config --global credential.helper \
+       /usr/share/doc/git/contrib/credential/libsecret/git-credential-libsecret
+
+So, if you download a private repository and put your PAT instead of your password, 
+git will store it securely on your computer.
+
+So, to view your PAT you can use secret-tool following the procedure:
+
+Make sure secret-tools is installed:
+
+    sudo apt install libsecret-tools
+
+secret-tool stores credentials based on key/value pairs. So, you can show your PAT 
+looking for credential associated with github.com server.
+
+    secret-tool lookup server github.com
+
