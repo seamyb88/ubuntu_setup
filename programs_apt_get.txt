@@ -3,3 +3,6 @@ curl
 git
 htop
 make
+gcc-10
+zsh
+neovim

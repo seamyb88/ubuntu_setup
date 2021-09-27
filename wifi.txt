@@ -1,0 +1,33 @@
+Wifi Speed was very slow. Corrected by two different things.
+
+1. Fix the bug in Debian Avahi-daemon
+
+The slow WiFi in Ubuntu problem could also be related to a bug in Avahi-daemon of 
+Debian. 
+Ubuntu and many other Linux distribution are based on Debian so this bug propagates
+to these Linux distributions as well.
+
+To fix this bug, you have to edit the nsswitch configuration file. Open a terminal 
+and use the following command:
+
+sudo nvim /etc/nsswitch.conf
+
+This will open the configuration file in gedit so that you could edit it easily in 
+GUI. 
+look for the following line:
+
+hosts:          files mdns4_minimal [NOTFOUND=return] dns mdns4
+
+If you find this file, replace it with the following line:
+
+hosts:          files dns
+
+Save it, close it, restart your computer. It should fix the slow wireless connection 
+problem for you. 
+
+
+2.
+
+sudo nvim /etc/NetworkManager/conf.d/default-wifi-powersave-on.conf
+
+Then changed the value from 3 to 2, saved changes and rebooted.
