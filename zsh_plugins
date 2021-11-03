@@ -1,0 +1,7 @@
+### Plugin directories are placed in ~/.oh-my-zsh.
+### They must contain the file <plugin name>.plugin.zsh.
+### Must be added to .zshrc in plugins = (...)
+
+# Highlight words in output of command via pipe
+# Dependent on ack.
+https://github.com/paoloantinori/hhighlighter

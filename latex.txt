@@ -1,0 +1,7 @@
+Install texlive locally in ~/latex/texlive/.
+
+https://www.tug.org/texlive/quickinstall.html
+
+Put ~/latex/texlive/2021/bin/x86_64-linux in the PATH before /usr/bin.
+
+

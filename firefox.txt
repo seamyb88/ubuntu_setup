@@ -1,0 +1,14 @@
+*** Passwords 
+
+To transfer login and password details, copy the following files to the profile
+directory in .mozilla in $HOME. The profile directory can be found by 
+settings -> help -> more troubleshooting information.
+
+logins.json
+key4.db
+
+For bookmarks, copy the directory 
+
+BookmarkBackups
+
+into the same directory as above.

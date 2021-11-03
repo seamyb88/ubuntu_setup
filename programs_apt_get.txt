@@ -6,3 +6,9 @@ make
 gcc-10
 zsh
 neovim
+bison
+flex
+gnuplot
+bat
+ruby-dev
+ack
